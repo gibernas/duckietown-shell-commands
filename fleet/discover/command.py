@@ -132,7 +132,7 @@ class DTCommand(DTCommandAbs):
         parser = argparse.ArgumentParser(prog=prog, usage=usage)
 
         parser.add_argument('--type', dest="filter_type", default=None,
-                            choices=['duckiebot', 'watchtower', 'trafficlight'],
+                            choices=['duckiebot', 'watchtower', 'traffic_light'],
                             help="Filter devices by type")
 
         parsed = parser.parse_args(args)
@@ -145,7 +145,6 @@ class DTCommand(DTCommandAbs):
         while True:
             listener.print()
             time.sleep(1.0 / REFRESH_HZ)
-
 
 
 def column_to_text_and_color(column, hostname, services):
